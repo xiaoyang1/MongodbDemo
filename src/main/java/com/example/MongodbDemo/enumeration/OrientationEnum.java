@@ -3,7 +3,7 @@ package com.example.MongodbDemo.enumeration;
 public enum OrientationEnum implements CodeEnum {
     //朝向（正面、背面、侧面）
     FRONT("front", "正面"),
-    BACK("Back", "背面"),
+    BACK("back", "背面"),
     SIDE("side", "侧面");
 
     private String code;

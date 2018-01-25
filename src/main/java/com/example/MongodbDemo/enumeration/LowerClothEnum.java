@@ -3,11 +3,11 @@ package com.example.MongodbDemo.enumeration;
 public enum  LowerClothEnum implements CodeEnum{
 
     //下身衣着类型：（长裤，短裤，长裙，短裙，连衣裙）
-    PLANTS("plants", "长裤"),
-    SHORTPLANTS("shortPlants", "短裤"),
+    PLANTS("trousers", "长裤"),
+    SHORTPLANTS("pants", "短裤"),
     LONGUETTE("longuette", "长裙"),
     KILT("kilt", "短裙"),
-    ONEPIECEDRESS("onePieceDress", "连衣裙");
+    ONEPIECEDRESS("onePiece", "连衣裙");
 
     private String code;//colorType;
     private String value; //colorName;

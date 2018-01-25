@@ -8,8 +8,8 @@ public enum UpperClothEnum implements CodeEnum{
     SWEATER("sweater", "毛衣"),
     JACKET("jacket", "夹克"),
     DOWNCOAT("downCoat", "羽绒服"),
-    WINDCOATS("windCoats", "大衣风衣"),
-    ONEPIECEDRESS("onePieceDress", "连衣裙"),
+    WINDCOATS("windCoat", "大衣风衣"),
+    ONEPIECEDRESS("onePiece", "连衣裙"),
     NULL("null", "无上衣");
 
 

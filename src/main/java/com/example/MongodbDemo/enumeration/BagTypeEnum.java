@@ -4,7 +4,7 @@ public enum BagTypeEnum implements CodeEnum{
     //携带包的类型（单肩包、双肩包、拉杆箱、手提包）
     SHOULDERBAG("shoulderBag", "单肩包"),
     BACKPACK("backpack", "双肩包"),
-    DRAWBARBOX("draw-barBox","拉杆箱"),
+    DRAWBARBOX("drawbarBox","拉杆箱"),
     HANDBAG("handbag", "手提包");
 
     private String code;
