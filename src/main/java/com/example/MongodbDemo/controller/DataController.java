@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -53,9 +55,11 @@ public class DataController {
         score2.setDes("hzb_child2");
         student2.setStudentScore(score2);
 
-        studentService.save(student, collection);
-        studentService.save(student1, collection);
-        studentService.save(student2, collection);
+//        studentService.save(student, collection);
+//        studentService.save(student1, collection);
+//        studentService.save(student2, collection);
+        List<Student> list = Arrays.asList(student,student1,student2);
+        studentService.save(list, collection);
     }
 
     @RequestMapping("/findAll")

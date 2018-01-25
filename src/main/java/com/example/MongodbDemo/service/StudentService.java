@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public interface StudentService {
 
-    public void save(Student stu, String collection);
+    public void save(List<Student> stu, String collection);
 
     public List<Student> findAll(String collection);
 

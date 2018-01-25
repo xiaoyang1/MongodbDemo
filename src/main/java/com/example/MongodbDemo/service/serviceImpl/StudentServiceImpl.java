@@ -15,7 +15,7 @@ public class StudentServiceImpl implements StudentService{
     private StudentDao studentDao;
 
     @Override
-    public void save(Student stu, String collection) {
+    public void save(List<Student> stu, String collection) {
         studentDao.save(stu, collection);
     }
 

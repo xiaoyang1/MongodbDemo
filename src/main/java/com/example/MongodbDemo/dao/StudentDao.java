@@ -1,11 +1,10 @@
 package com.example.MongodbDemo.dao;
 
 import com.example.MongodbDemo.domain.Student;
+import com.mongodb.BasicDBObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
+import org.springframework.data.mongodb.core.query.*;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.ParameterizedType;
@@ -16,8 +15,9 @@ public class StudentDao {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public void save(Student stu, String collection){
-        mongoTemplate.save(stu, collection);
+    public void save(List<Student> stu, String collection){
+//        mongoTemplate.save(stu, collection);
+        mongoTemplate.insert(stu, collection);
     }
 
 //    public <T>List<T> findAll(String collection){
@@ -31,6 +31,15 @@ public class StudentDao {
     public List<Student> findByName(String name, String collection){
         List<Student> list = null;
         Query query = new Query(Criteria.where("name").is(name));
+//        如果要选择相应的字段，用BasicQuery
+        BasicDBObject fieldsObject = new BasicDBObject();
+        fieldsObject.put("name", true);
+        fieldsObject.put("age", true);
+        fieldsObject.put("sex", true);
+        Query query1 = new BasicQuery(Criteria.where("name").is(name).getCriteriaObject(), fieldsObject);
+        mongoTemplate.find(query1, Student.class, collection).forEach((student) -> {
+            System.out.println(student);
+        });
         list = mongoTemplate.find(query, Student.class, collection);
         return list;
     }
