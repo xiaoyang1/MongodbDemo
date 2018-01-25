@@ -9,6 +9,7 @@ import java.util.Date;
  */
 @Data
 public class Cyclist extends Pedestrian{
+    private String _id;
     //骑行车的颜色 （黑、白、红、黄、蓝、绿、紫、棕、灰、橙、多色）
     private String bikeColor;
     //车上人数

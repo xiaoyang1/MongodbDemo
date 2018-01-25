@@ -11,6 +11,7 @@ import java.util.Date;
 @Data
 public class Pedestrian {
 
+    private String _id;
     //卡口id
     private String deviceNumber;
     //日期时间

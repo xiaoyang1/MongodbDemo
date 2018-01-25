@@ -7,5 +7,5 @@ public class VehicleDao {
 
     @Autowired
     private MongoTemplate mongoTemplate;
-    
+
 }
