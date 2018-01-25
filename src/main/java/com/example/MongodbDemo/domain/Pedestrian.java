@@ -16,7 +16,7 @@ public class Pedestrian {
     //日期时间
     private Date time;
     //性别
-    private String sex;
+    private String gender;
     //年龄
     private int age;
     //眼镜

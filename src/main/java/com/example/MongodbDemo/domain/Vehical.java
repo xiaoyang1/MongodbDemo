@@ -30,7 +30,7 @@ public class Vehical {
     //违法行为
     private String illegalAct;
     //年检标
-    private String AnnualInspectionMark;
+    private String annualInspectionMark;
     //纸巾盒
     private String tissueBox;
     //遮阳板
@@ -40,7 +40,7 @@ public class Vehical {
     //摆件
     private String decoration;
     //无牌或者遮挡号牌
-    private String NoPlate;
+    private String noPlate;
     //是否有可用人脸
     private int hasFace;
 }
